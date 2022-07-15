@@ -30,12 +30,12 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class AuthService {
 
-	private final PasswordEncoder passwordEncoder;
-	private final UserRepository userRepository;
-	private final VerificationTokenRepository verificationTokenRepository;
-	private final MailService mailService;
-	private final AuthenticationManager authenticationManager;
-	private final JwtProvider jwtProvider;
+	private PasswordEncoder passwordEncoder;
+	private UserRepository userRepository;
+	private VerificationTokenRepository verificationTokenRepository;
+	private MailService mailService;
+	private AuthenticationManager authenticationManager;
+	private JwtProvider jwtProvider;
 
 	@Transactional
 	public void signup(RegisterRequest registerRequest) {
